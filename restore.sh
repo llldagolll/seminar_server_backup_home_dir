@@ -2,4 +2,6 @@
 
 set -eu
 
-rsync -avnP --delete --exclude-from=${LEAVEFILE} ${BACKUPDIR}\/latest/ ${SRCDIR} >> ./log/$(date +%Y-%m-%d-%s).log
+PWD=$(pwd)
+
+rsync -avnP --delete --exclude-from=${LEAVEFILE} ${BACKUPDIR}\/latest/${PWD} ${SRCDIR}\/${PWD} >> ./log/$(date +%Y-%m-%d-%s).log
