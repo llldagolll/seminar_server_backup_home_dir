@@ -1,0 +1,5 @@
+*store
+*rsync-time-backup
+*.env
+log/*
+*echo.sh
